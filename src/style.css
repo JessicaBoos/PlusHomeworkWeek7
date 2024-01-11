@@ -1,0 +1,59 @@
+body {
+  background-image: url("weatherAppBG.png");
+  background-color: #a393eb;
+  color: #27296d;
+}
+
+.current-city {
+  font-size: 40px;
+}
+
+.app {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 30px auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 19px;
+  text-align: center;
+}
+
+.search-input {
+  margin: 10px auto;
+  width: 400px;
+  padding: 13px;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: #a393eb;
+  color: white;
+}
+
+.search-button {
+  margin: 10px auto;
+  width: 50px;
+  padding: 5px;
+  border-radius: 30px;
+  border-color: transparent;
+  background-color: #a393eb;
+  color: white;
+  font-size: 30px;
+}
+
+.current-details {
+  color: #5e63b6;
+}
+
+footer {
+  color: #5e63b6;
+}
+h1 {
+  margin: 10px;
+}
+
+hr {
+  color: #a393eb;
+  max-width: 400px;
+}
+
+a {
+  color: #27296d;
+}

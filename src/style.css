@@ -2,10 +2,10 @@ body {
   background-image: url("weatherAppBG.png");
   background-color: #a393eb;
   color: #27296d;
-}
 
-.current-city {
-  font-size: 40px;
+  font-family: "Indie Flower", cursive;
+
+  font-size: 35px;
 }
 
 .app {
@@ -40,11 +40,23 @@ body {
 
 .current-details {
   color: #5e63b6;
+  font-size: 17px;
+  margin: 0;
 }
 
-footer {
+.details {
   color: #5e63b6;
+  font-size: 13px;
 }
+
+.current-temperature {
+  font-size: 30px;
+}
+
+.current-temperature-value {
+  font-weight: bold;
+}
+
 h1 {
   margin: 10px;
 }

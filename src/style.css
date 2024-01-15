@@ -1,5 +1,6 @@
 body {
-  background-image: url("weatherAppBG.png");
+  background-image: url("pictures/weatherAppBG.png");
+  background-size: cover;
   background-color: #a393eb;
   color: #27296d;
 
@@ -40,21 +41,27 @@ body {
 
 .current-details {
   color: #5e63b6;
-  font-size: 17px;
+  font-size: 21px;
   margin: 0;
 }
 
 .details {
   color: #5e63b6;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .current-temperature {
-  font-size: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .current-temperature-value {
   font-weight: bold;
+  font-size: 45px;
 }
 
 h1 {
@@ -62,10 +69,14 @@ h1 {
 }
 
 hr {
-  color: #a393eb;
+  color: #a393eb !important;
   max-width: 400px;
 }
 
 a {
   color: #27296d;
+}
+
+input[type="search"]::placeholder {
+  color: white;
 }

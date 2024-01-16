@@ -1,3 +1,27 @@
+function replaceIcon(condition) {
+  let iconElement = document.querySelector("#current-temperature-icon");
+  let icon;
+
+  if (condition === "clear sky") {
+    icon = "src/pictures/Weather-sun.png";
+  } else if (condition === "few clouds") {
+    icon = "src/pictures/Weather-few-clouds.png";
+  } else if (condition === "scattered clouds") {
+    icon = "src/pictures/Weather-scattered-clouds.png";
+  } else if (condition === "broken clouds" || condition === "overcast clouds") {
+    icon = "src/pictures/Weather-broken-clouds.png";
+  } else if (condition === "shower rain") {
+    icon = "src/pictures/Weather-shower-rain.png";
+  } else if (condition === "rain") {
+    icon = "src/pictures/Weather-rain.png";
+  } else if (condition === "thunderstorm") {
+    icon = "src/pictures/Weather-thunderstorm.png";
+  } else {
+    icon = "src/pictures/Weather-mist.png";
+  }
+  iconElement.innerHTML = `<img src="${icon}"class="weather-app-icon" />`;
+}
+
 function updateWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
@@ -9,8 +33,7 @@ function updateWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   let windElement = document.querySelector("#weather-wind");
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
-  let iconElement = document.querySelector("#current-temperature-icon");
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"class="weather-app-icon" />`;
+  replaceIcon(response.data.condition.description);
 }
 
 function searchCity(city) {

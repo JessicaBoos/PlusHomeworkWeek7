@@ -9,6 +9,8 @@ function updateWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   let windElement = document.querySelector("#weather-wind");
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
+  let iconElement = document.querySelector("#current-temperature-icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}"class="weather-app-icon" />`;
 }
 
 function searchCity(city) {

@@ -29,12 +29,12 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 currentDateELement.innerHTML = formatDate(currentDate);
 
-function handleSeachSubmit(event) {
+function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = searchInput.value;
 }
 
-let seachFormElement = document.querySelector("#seach-form");
-seachFormElement.addEventListener("submit", handleSeachSubmit);
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);

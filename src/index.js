@@ -28,3 +28,13 @@ function formatDate(date) {
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 currentDateELement.innerHTML = formatDate(currentDate);
+
+function handleSeachSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = searchInput.value;
+}
+
+let seachFormElement = document.querySelector("#seach-form");
+seachFormElement.addEventListener("submit", handleSeachSubmit);

@@ -3,10 +3,9 @@ body {
   background-size: cover;
   background-color: #a393eb;
   color: #27296d;
-
   font-family: "Indie Flower", cursive;
-
   font-size: 35px;
+  min-height: 100vh;
 }
 
 .app {

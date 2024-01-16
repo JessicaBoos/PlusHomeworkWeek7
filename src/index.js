@@ -1,9 +1,15 @@
 function replaceIcon(condition) {
   let iconElement = document.querySelector("#current-temperature-icon");
   let icon;
+  var currentTime = new Date();
+  var currentHour = currentTime.getHours();
 
   if (condition === "clear sky") {
-    icon = "src/pictures/Weather-sun.png";
+    if (currentHour >= 6 && currentHour < 18) {
+      icon = "src/pictures/Weather-sun.png";
+    } else {
+      icon = "src/pictures/Weather-moon.png";
+    }
   } else if (condition === "few clouds") {
     icon = "src/pictures/Weather-few-clouds.png";
   } else if (condition === "scattered clouds") {
@@ -37,7 +43,7 @@ function updateWeather(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiKey = "bb5982aa3c1a3d9fb3839bo024tffc09";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(updateWeather);
 }
